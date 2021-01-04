@@ -20,4 +20,7 @@ def main(tshark_path, pcap_path):
             result_file.write(tcp_stream_ascii)
 
 
-main(sys.argv[1], sys.argv[2])
+if len(sys.argv) == 3:
+    main(sys.argv[1], sys.argv[2])
+else:
+    print("The script requires two arguments: path to TShark and path to PCAP file")
